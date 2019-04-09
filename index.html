@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Array Methods</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+</head>
+<body>
+    <h1>Array Methods</h1>
+
+    <div class = "firstBox">
+    <p>This is my array</p> 
+    <p id="display"></p>
+
+</div>
+
+<div class = "actionItems">
+
+    <button onclick = "unshiftVal()">Unshift</button>
+    <button onclick = "shiftVal()">Shift</button>
+
+    <p id = "newItem">
+        <input type="text">
+    </p>
+
+    <button onclick = "pushVal()">Push</button>
+    <button onclick = "popVal()">Pop</button>
+    <button onclick = "clrVal()">Clear</button>
+
+</div>
+    
+    <script>
+    let array = ['Alex', 'Steve', 'Zombie', 'Creeper', 'Ocelot'];
+
+    function displayArray(){
+        document.getElementById("display").innerHTML = array;
+    }
+
+    displayArray();
+
+    function popVal(){
+        array.pop();
+        displayArray();
+    }
+
+    function shiftVal(){
+        array.shift();
+        displayArray();
+    }
+
+
+    function UnshiftVal(){
+        let newinput = document.getElementById("newItem").value;
+        array.unshift(newinput);
+        displayArray();
+    }
+
+    function PushVal(){
+        let newInputPop = document.getElementById("newItem").value;
+        array.push(newInputPop);
+        displayArray();
+    }
+
+    function clrVal(){
+        array = [];
+        displayArray();
+    }
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

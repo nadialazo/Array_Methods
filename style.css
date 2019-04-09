@@ -1,0 +1,19 @@
+body {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .firstBox {
+        border: solid 1px rgb(212, 208, 208);
+        margin-left: 40%;
+        margin-right: 40%;
+        margin-bottom: 30px;
+    }
+
+
+    button {
+        height: 20px;
+    }
