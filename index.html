@@ -21,9 +21,7 @@
     <button onclick = "unshiftVal()">Unshift</button>
     <button onclick = "shiftVal()">Shift</button>
 
-    <p id = "newItem">
-        <input type="text">
-    </p>
+    <input type="text" id="newItem">
 
     <button onclick = "pushVal()">Push</button>
     <button onclick = "popVal()">Pop</button>
@@ -32,39 +30,39 @@
 </div>
     
     <script>
-    let array = ['Alex', 'Steve', 'Zombie', 'Creeper', 'Ocelot'];
+    let names = ['Alex', 'Steve', 'Zombie', 'Creeper', 'Ocelot'];
 
     function displayArray(){
-        document.getElementById("display").innerHTML = array;
+        document.getElementById("display").innerHTML = names;
     }
 
     displayArray();
 
     function popVal(){
-        array.pop();
+        names.pop();
         displayArray();
     }
 
     function shiftVal(){
-        array.shift();
+        names.shift();
         displayArray();
     }
 
 
     function UnshiftVal(){
-        let newinput = document.getElementById("newItem").value;
-        array.unshift(newinput);
+        let firstItem = document.getElementById("newItem").value;
+        names.unshift(firstItem);
         displayArray();
     }
 
     function PushVal(){
-        let newInputPop = document.getElementById("newItem").value;
-        array.push(newInputPop);
+        let lastItem = document.getElementById("newItem").value;
+         names.push(lastItem);
         displayArray();
     }
 
     function clrVal(){
-        array = [];
+        names = [];
         displayArray();
     }
 
